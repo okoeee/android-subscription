@@ -41,9 +41,10 @@ class SubscriptionAdapter(context: Context, data: OrderedRealmCollection<Subscri
         adapterData?.run {
             val subscription = get(position)
             viewHolder.serviceName.text = if(subscription.serviceName != null) {subscription.serviceName} else {"serviceNameがぬる"}
-            viewHolder.money.text = if(subscription.money != null) {subscription.money} else {"ぬる"}
+            viewHolder.money.text = if(subscription.money != null) {subscription.money} else {"moneyがぬる"}
         }
         return view
     }
 }
 
+//todo realmからデータの抽出
