@@ -26,7 +26,7 @@ class ScheduleEditActivity : AppCompatActivity() {
         if(subscriptionId != -1L) {
             val subscription = realm.where<Subscription>().equalTo("id", subscriptionId).findFirst()
             serviceNameEdit.setText(subscription?.serviceName)
-            moneyEdit.setText(subscription?.money)
+            moneyEdit.setText(subscription?.money.toString())
         }
 
         save.setOnClickListener {
@@ -37,7 +37,7 @@ class ScheduleEditActivity : AppCompatActivity() {
                         val nextId = (maxId?.toLong() ?: 0L) + 1
                         val subscription = realm.createObject<Subscription>(nextId)
                         subscription.serviceName = serviceNameEdit.text.toString()
-                        subscription.money = moneyEdit.text.toString()
+                        subscription.money = moneyEdit.text.toString().toInt()
                     }
                     alert("追加しました") {
                         yesButton { finish() }
@@ -47,7 +47,7 @@ class ScheduleEditActivity : AppCompatActivity() {
                     realm.executeTransaction {
                         val subscription = realm.where<Subscription>().equalTo("id", subscriptionId).findFirst()
                         subscription?.serviceName = serviceNameEdit.text.toString()
-                        subscription?.money = moneyEdit.text.toString()
+                        subscription?.money = moneyEdit.text.toString().toInt()
                     }
                     alert("変更しました") {
                         yesButton { finish() }

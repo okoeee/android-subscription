@@ -23,6 +23,7 @@ class MainActivity : AppCompatActivity() {
         //Toolbar defined in the layout
         realm = Realm.getDefaultInstance()
 
+        //realmとListViewの紐付け
         val subscription = realm.where<Subscription>().findAll()
         listView.adapter = SubscriptionAdapter(this,  subscription)
 

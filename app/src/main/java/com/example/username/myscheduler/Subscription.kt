@@ -8,5 +8,5 @@ open class Subscription : RealmObject() {
     @PrimaryKey
     var id: Long = 0
     var serviceName = ""
-    var money = ""
+    var money: Int = 0
 }
