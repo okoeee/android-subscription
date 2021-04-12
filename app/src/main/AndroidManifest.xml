@@ -3,7 +3,7 @@
     package="com.example.username.myscheduler">
 
     <application
-        android:name=".MySchedulerApplication"
+        android:name=".MySubscriptionApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -31,7 +31,7 @@
                 android:value=".MainActivity"/>
         </activity>
 
-        <activity android:name=".ScheduleEditActivity" />
+        <activity android:name=".SubscriptionEditActivity" />
     </application>
 
 </manifest>

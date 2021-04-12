@@ -9,4 +9,5 @@ open class Subscription : RealmObject() {
     var id: Long = 0
     var serviceName = ""
     var money: Int = 0
+    var cycle: String = ""
 }

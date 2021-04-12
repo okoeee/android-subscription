@@ -1,10 +1,8 @@
 package com.example.username.myscheduler
 
 import android.os.Bundle
-import android.support.v7.app.ActionBar
 import android.support.v7.app.AppCompatActivity
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import io.realm.Realm
 import io.realm.kotlin.where
@@ -28,12 +26,12 @@ class MainActivity : AppCompatActivity() {
         listView.adapter = SubscriptionAdapter(this,  subscription)
 
         fab.setOnClickListener { view ->
-            startActivity<ScheduleEditActivity>()
+            startActivity<SubscriptionEditActivity>()
         }
 
         listView.setOnItemClickListener { parent, view, position, id ->
             val subscription = parent.getItemAtPosition(position) as Subscription
-            startActivity<ScheduleEditActivity>("subscription_id" to subscription.id )
+            startActivity<SubscriptionEditActivity>("subscription_id" to subscription.id )
         }
 
         //タイトルのセット

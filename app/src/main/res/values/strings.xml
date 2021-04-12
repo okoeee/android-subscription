@@ -10,4 +10,6 @@
     <string name="service_name">サービス名：</string>
     <string name="money">金額：</string>
     <string name="enn">¥</string>
+    <string name="cycle">支払い周期</string>
+    <string name="period">支払い周期：</string>
 </resources>

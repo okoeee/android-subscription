@@ -30,6 +30,7 @@ class DisPlayGraph : AppCompatActivity() {
         //データの取得
         realm = Realm.getDefaultInstance()
         val subscription = realm.where<Subscription>().findAll()
+        println(subscription)
 
         //合計金額
         val sum = subscription.sum("money").toLong().toString()

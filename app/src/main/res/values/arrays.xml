@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="select_year_month_arr">
+        <item>月に一度</item>
+        <item>年に一度</item>
+    </string-array>
+</resources>
